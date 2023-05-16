@@ -322,3 +322,36 @@
     }
 }
 // /buy
+
+
+//
+
+.banner-blue{
+    height: 80px;
+    background-color: #0085ff;
+    margin-bottom: 10px;
+
+    position: relative;
+
+    img{
+        position: absolute;
+        bottom: 50%;
+        width: 200px;
+        height: 300px;
+
+    }
+}
+
+.banner-card-verde {
+    height: 40px;
+    background-color: #55ba59;
+    color: white;
+    font-weight: bold;
+}
+
+.card {
+    img{
+        height: 90%;
+
+    }
+}
