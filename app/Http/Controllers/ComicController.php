@@ -17,11 +17,13 @@ class ComicController extends Controller
         $linksNav = config('nav');
         $footerData = config('footer');
         $signUpData = config('signUp');
+        $comics = Comic::all();
 
         $data = [
             'links' => $linksNav,
             'columns' => $footerData,
             'socialIcons' => $signUpData,
+            'comics' => $comics,
         ];
 
         return view('comics/index', $data);
