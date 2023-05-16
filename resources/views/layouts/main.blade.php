@@ -29,6 +29,10 @@
         @include('partials/footer')
     </div>
 
+    <div class="sign-up">
+        @include('partials/signUp')
+    </div>
+
 </body>
 
 </html>

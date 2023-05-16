@@ -140,3 +140,50 @@
 
 
 // /footer
+
+
+
+// SignUp
+.sign-up {
+    .cont {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+
+
+    padding: 25px 100px;
+
+    background-color: #303030;
+    .section-sx {
+        .button-sign-up {
+            border: 2px solid #0085ff;
+            padding: 0.5em;
+            background-color: transparent;
+            color: white;
+            font-weight: bold;
+        }
+    }
+    .section-dx{
+        display: flex;
+        align-items: center;
+        gap: 50px;
+        .title-social {
+            color: #0085ff;
+            font-weight: bold;
+        }
+        .social-list {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+
+            margin-bottom: 0;
+
+            .link {
+                list-style-type: none;
+            }
+        }
+    }
+}
+}
+// /SignUP

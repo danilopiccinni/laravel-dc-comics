@@ -11,10 +11,12 @@ class PageController extends Controller
 
         $linksNav = config('nav');
         $footerData = config('footer');
+        $signUpData = config('signUp');
 
         $data = [
             'links' => $linksNav,
             'columns' => $footerData,
+            'socialIcons' => $signUpData,
         ];
 
         return view('home', $data);
