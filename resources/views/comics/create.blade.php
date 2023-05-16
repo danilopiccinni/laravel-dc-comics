@@ -35,11 +35,11 @@
         </div>
         <div class="mb-2">
             <label for="artists">artists</label>
-            <input type="text" id="artists" name="artists">
+            <input type="text" id="artists" name="artists"> <span>separare gli artist con una virgola</span>
         </div>
         <div class="mb-2">
             <label for="writers">writers</label>
-            <input type="text" id="writers" name="writers">
+            <input type="text" id="writers" name="writers"> <span>separare i writer con una virgola</span>
         </div>
     
         <button type="submit">aggiungi</button>

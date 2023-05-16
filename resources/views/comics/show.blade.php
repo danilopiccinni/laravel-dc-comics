@@ -45,11 +45,9 @@
                         <tr>
                             <th >Art by:</th>
                             <td >
-                                {{-- {{dd($comic->artists)}} --}}
                                 @foreach(json_decode($comic->artists , true) as $singleArtist)
     
                                 <a href="">{{$singleArtist}}</a>
-                                {{-- {{ implode(',', json_decode($comic->writers , true))}}  --}}
                                 @endforeach
                             </td>
                         </tr>
@@ -59,7 +57,6 @@
                                 @foreach(json_decode($comic->writers , true) as $singleWriter)
     
                                 <a href="">{{$singleWriter}}</a>  
-                                {{-- {{ implode(',', json_decode($comic->writers , true))}}  --}}
                                 @endforeach
                             </td>
                         </tr>

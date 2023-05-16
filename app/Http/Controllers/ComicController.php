@@ -64,8 +64,6 @@ class ComicController extends Controller
     {
         $formData = $request->all();
 
-        // dd($formData);
-
         $newComic = new Comic();
 
         $newComic->title = $formData['title'];
@@ -75,12 +73,7 @@ class ComicController extends Controller
         $newComic->series = $formData['series'];
         $newComic->sale_date = $formData['sale_date'];
         $newComic->type = $formData['type'];
- 
-        // dd($arrayartists = json_encode(explode(',',$formData['artists'])));
         $newComic->artists =  json_encode(explode(',',$formData['artists']));
-        // dd($newComic->artists =  $arrayartists);
-        // dd(explode(',',json_encode($formData['artists'])));
-
         $newComic->writers = json_encode(explode(',',$formData['writers']));
 
         $newComic->save();
