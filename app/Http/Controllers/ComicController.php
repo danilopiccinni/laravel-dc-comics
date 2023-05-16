@@ -14,7 +14,17 @@ class ComicController extends Controller
      */
     public function index()
     {
-        //
+        $linksNav = config('nav');
+        $footerData = config('footer');
+        $signUpData = config('signUp');
+
+        $data = [
+            'links' => $linksNav,
+            'columns' => $footerData,
+            'socialIcons' => $signUpData,
+        ];
+
+        return view('comics/index', $data);
     }
 
     /**
