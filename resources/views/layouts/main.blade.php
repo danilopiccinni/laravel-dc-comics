@@ -17,9 +17,17 @@
 
 <body>
 
-    @include('partials/header')
+    <div class="header">
+        @include('partials/header')
+    </div>
 
-    @yield('content')
+    <div class="cont-content" >
+        @yield('content')
+    </div>
+
+    <div class="footer">
+        @include('partials/footer')
+    </div>
 
 </body>
 
