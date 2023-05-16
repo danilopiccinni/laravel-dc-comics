@@ -21,6 +21,7 @@
 
         <button class="load-more-button">load more</button>
 
+        <a href="{{route('comics.create')}}">Aggiungi un fumetto</a>
         
     </div>
     
