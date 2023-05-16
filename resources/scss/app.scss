@@ -1,1 +1,62 @@
 @import '~bootstrap/scss/bootstrap';
+
+
+// header
+// nav
+.nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 100px;
+    padding-right: 100px;
+
+    .logo {
+        width: 80px;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+    .link-list {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 0;
+        .link {
+            font-weight: bold;
+            text-transform: uppercase;
+            padding: 50px 15px;
+            list-style-type: none;
+            position: relative;
+
+            &:hover{
+                background-color: #0282f93d;
+                cursor: pointer;
+            }
+        }
+    }        
+}
+.active::before {
+    content: "";
+
+    width: 50%;
+    height: 5px;
+
+    background-color: #0282f9;
+
+    position: absolute;
+    bottom: 3px;
+    right: 50%;
+    translate: 50% 50%;            
+}
+
+.cont-search {
+    display: flex;
+
+    input {
+        display: flex;
+        max-width: 150px;
+    }
+}
+
+// /header
+// /nav
