@@ -60,7 +60,20 @@ class ComicController extends Controller
      */
     public function show(Comic $comic)
     {
-        //
+        $linksNav = config('nav');
+        $footerData = config('footer');
+        $signUpData = config('signUp');
+
+
+        $data = [
+            'links' => $linksNav,
+            'columns' => $footerData,
+            'socialIcons' => $signUpData,
+            'comic' => $comic,
+
+        ];
+        
+        return view('comics.show', $data);
     }
 
     /**
