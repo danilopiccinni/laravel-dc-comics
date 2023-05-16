@@ -31,11 +31,23 @@
                 <tbody>
                     <tr>
                         <td>Art by:</td>
-                        <td> {{ $comic->artists}} </td>
+                        <td>
+                            @foreach(json_decode($comic->artists , true) as $singleArtist)
+
+                            <a href="">{{$singleArtist}}</a>
+                            {{-- {{ implode(',', json_decode($comic->writers , true))}}  --}}
+                            @endforeach
+                        </td>
                     </tr>
                     <tr>
                         <td>Written by:</td>
-                        <td>{{ $comic->writers }}</td>
+                        <td>
+                            @foreach(json_decode($comic->writers , true) as $singleWriter)
+
+                            <a href="">{{$singleWriter}}</a>  
+                            {{-- {{ implode(',', json_decode($comic->writers , true))}}  --}}
+                            @endforeach
+                        </td>
                     </tr>
                 </tbody>
             </table>
