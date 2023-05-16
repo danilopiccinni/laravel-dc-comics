@@ -18,12 +18,14 @@ class ComicController extends Controller
         $footerData = config('footer');
         $signUpData = config('signUp');
         $comics = Comic::all();
+        $buyData = config('buy');
 
         $data = [
             'links' => $linksNav,
             'columns' => $footerData,
             'socialIcons' => $signUpData,
             'comics' => $comics,
+            'buyLinks' => $buyData,
         ];
 
         return view('comics/index', $data);

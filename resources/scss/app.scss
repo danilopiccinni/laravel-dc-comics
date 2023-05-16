@@ -291,3 +291,34 @@
 }
 
 // /indexComics
+
+
+
+// buy
+.buy {
+    .cont {
+        padding: 25px 100px;
+        background-color: #0282f9;
+        .link-list {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            .link{
+                list-style-type: none;
+            }
+            .int-cont-link {
+                display: flex;
+                align-items: center;
+                gap: 12px;
+                .title-link {
+                    color: white;
+                }
+                .link-image {
+                    max-width: 50%;
+                    max-height: 50px;
+                }
+            }
+        }
+    }
+}
+// /buy

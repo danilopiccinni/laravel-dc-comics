@@ -21,7 +21,11 @@
 
         <button class="load-more-button">load more</button>
 
+        
     </div>
-
+    
+    <div class="buy">
+        @include('partials/buy')
+    </div>
 
 @endsection
