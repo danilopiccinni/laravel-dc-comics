@@ -45,6 +45,7 @@
                         <tr>
                             <th >Art by:</th>
                             <td >
+                                {{-- {{dd($comic->artists)}} --}}
                                 @foreach(json_decode($comic->artists , true) as $singleArtist)
     
                                 <a href="">{{$singleArtist}}</a>

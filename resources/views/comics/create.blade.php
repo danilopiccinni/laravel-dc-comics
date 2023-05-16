@@ -33,7 +33,15 @@
             <label for="type">type</label>
             <input type="text" id="type" name="type">
         </div>
-
+        <div class="mb-2">
+            <label for="artists">artists</label>
+            <input type="text" id="artists" name="artists">
+        </div>
+        <div class="mb-2">
+            <label for="writers">writers</label>
+            <input type="text" id="writers" name="writers">
+        </div>
+    
         <button type="submit">aggiungi</button>
     
     </form>
