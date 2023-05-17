@@ -141,6 +141,9 @@ class ComicController extends Controller
     {
         $formData = $request->all();
 
+        $formData['artists'] = json_encode(explode(',',$formData['artists']));
+        $formData['writers'] = json_encode(explode(',',$formData['writers']));
+
         $comic->update($formData);
 
         $comic->save();

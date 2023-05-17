@@ -39,11 +39,11 @@
             </div>
             <div class="mb-2">
                 <label for="artists">artists</label>
-                <input type="text" id="artists" name="artists" value="{{$comic->artists}}"> <em>(separare gli artist con una virgola)</em>
+                <input type="text" id="artists" name="artists" value="{{implode(',',json_decode($comic->artists))}}"> <em>(separare gli artist con una virgola)</em>
             </div>
             <div class="mb-2">
                 <label for="writers">writers</label>
-                <input type="text" id="writers" name="writers" value="{{$comic->writers}}"> <em>(separare i writer con una virgola)</em>
+                <input type="text" id="writers" name="writers" value="{{implode(',', json_decode($comic->writers))}}"> <em>(separare i writer con una virgola)</em>
             </div>
         
             <button type="submit">salva modifiche</button>
