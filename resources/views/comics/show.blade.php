@@ -90,6 +90,14 @@
 
 <a href="{{route('comics.edit' , $comic)}}">modifica</a>
 
+<form action="{{route('comics.destroy' , $comic)}}" method="POST">
+    @csrf
+    @method('DELETE')
+
+    <button type="submit" >Elimina</button>
+
+</form>
+
 <ul>
     <li>
         <a href="{{route('home')}}">vai alla home</a>
