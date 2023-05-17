@@ -114,7 +114,20 @@ class ComicController extends Controller
      */
     public function edit(Comic $comic)
     {
-        //
+
+        $linksNav = config('nav');
+        $footerData = config('footer');
+        $signUpData = config('signUp');
+
+
+        $data = [
+            'links' => $linksNav,
+            'columns' => $footerData,
+            'socialIcons' => $signUpData,
+            'comic' => $comic,
+
+        ];
+        return view('comics.edit' , $data);
     }
 
     /**
@@ -126,7 +139,14 @@ class ComicController extends Controller
      */
     public function update(Request $request, Comic $comic)
     {
-        //
+        $formData = $request->all();
+
+        $comic->update($formData);
+
+        $comic->save();
+
+        
+        return redirect()->route('comics.show' , $comic->id);
     }
 
     /**
