@@ -88,29 +88,39 @@
     </div>
 </div>
 
-<a class="btn btn-primary" href="{{route('comics.edit' , $comic)}}">modifica</a>
+<div class="d-flex justify-content-center gap-5 mt-5 mb-5">
+    <a class="btn btn-primary" href="{{route('comics.edit' , $comic)}}">modifica</a>
 
-{{-- <form action="{{route('comics.destroy' , $comic)}}" method="POST">
-    @csrf
-    @method('DELETE')
-
-    <button type="submit" >Elimina</button>
-
-</form> --}}
     <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
         ELIMINA
     </button>
+</div>
+
+<hr>
+
+<ul class="d-flex justify-content-center gap-5">
+    <li>
+        <a href="{{route('home')}}">vai alla home</a>
+    </li>
+
+    <li>
+        <a href="{{route('comics.index')}}">vai alla lista dei fumetti</a>
+    </li>
+</ul>
+
+
+
 
 <!-- Modal -->
 <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
+          <h1 class="modal-title fs-5" id="staticBackdropLabel">Eliminazione Comic</h1>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          Vuoi davvero eliminare il comic selezionato?
+          Vuoi davvero eliminare il comic selezionato? <br>
           ATTENZIONE: questa operazione è irreversibile
         </div>
         <div class="modal-footer">
@@ -127,21 +137,6 @@
       </div>
     </div>
   </div>
-
-  <hr>
-  <hr>
-
-<ul>
-    <li>
-        <a href="{{route('home')}}">vai alla home</a>
-    </li>
-
-    <li>
-        <a href="{{route('comics.index')}}">vai alla lista dei fumetti</a>
-    </li>
-</ul>
-
-
 
 
 @endsection
