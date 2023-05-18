@@ -10,77 +10,77 @@
             @method('PUT')
     
             <div class="mb-2">
-                <label for="title">title</label>
-                <input style= "@error('title') border : 2px solid red @enderror " type="text" id="title" name="title" value="{{old('title') ?? $comic->title}}">
+                <label class="col-1" for="title">title</label>
+                <input class=" col-4 @error('title') animate__animated animate__shakeX @enderror" style="@error('title') border : 2px solid red @enderror " type="text" id="title" name="title" value="{{old('title') ?? $comic->title}}">
+                @error('title')
+                    <em style="color:red"> {{$message}} </em>
+                @enderror
             </div>
-            @error('title')
-                <em style="color:red"> {{$message}} </em>
-            @enderror
 
             <div class="mb-2">
-                <label for="description">description</label>
-                <input style= "@error('description') border : 2px solid red @enderror " type="text" id="description" name="description" value="{{old('description') ?? $comic->description}}">
+                <label class="col-1" for="description">description</label>
+                <input class=" col-4 @error('description') animate__animated animate__shakeX @enderror" style="@error('description') border : 2px solid red @enderror " type="text" id="description" name="description" value="{{old('description') ?? $comic->description}}">
+                @error('description')
+                    <em style="color:red"> {{$message}} </em>
+                @enderror
             </div>
-            @error('description')
-                <em style="color:red"> {{$message}} </em>
-            @enderror
 
             <div class="mb-2">
-                <label for="thumb">thumb</label>
-                <input style= "@error('thumb') border : 2px solid red @enderror " type="text" id="thumb" name="thumb" value="{{old('thumb') ?? $comic->thumb}}">
+                <label class="col-1" for="thumb">thumb</label>
+                <input class=" col-4 @error('thumb') animate__animated animate__shakeX @enderror" style="@error('thumb') border : 2px solid red @enderror " type="text" id="thumb" name="thumb" value="{{old('thumb') ?? $comic->thumb}}">
+                @error('thumb')
+                    <em style="color:red"> {{$message}} </em>
+                @enderror
             </div>
-            @error('thumb')
-                <em style="color:red"> {{$message}} </em>
-            @enderror
 
             <div class="mb-2">
-                <label for="price">price</label>
-                <input style= "@error('price') border : 2px solid red @enderror " type="text" id="price" name="price" value="{{old('price') ?? $comic->price}}">
+                <label class="col-1" for="price">price</label>
+                <input class=" col-4 @error('price') animate__animated animate__shakeX @enderror" style="@error('price') border : 2px solid red @enderror " type="text" id="price" name="price" value="{{old('price') ?? $comic->price}}">
+                @error('price')
+                    <em style="color:red"> {{$message}} </em>
+                @enderror
             </div>
-            @error('price')
-                <em style="color:red"> {{$message}} </em>
-            @enderror
 
             <div class="mb-2">
-                <label for="series">series</label>
-                <input style= "@error('series') border : 2px solid red @enderror " type="text" id="series" name="series" value="{{old('series') ?? $comic->series}}">
+                <label class="col-1" for="series">series</label>
+                <input class=" col-4 @error('series') animate__animated animate__shakeX @enderror" style="@error('series') border : 2px solid red @enderror " type="text" id="series" name="series" value="{{old('series') ?? $comic->series}}">
+                @error('series')
+                    <em style="color:red"> {{$message}} </em>
+                @enderror
             </div>
-            @error('series')
-                <em style="color:red"> {{$message}} </em>
-            @enderror
 
             <div class="mb-2">
-                <label for="sale_date">sale_date</label>
-                <input style= "@error('sale_date') border : 2px solid red @enderror " type="text" id="sale_date" name="sale_date" value="{{old('sale_date') ?? $comic->sale_date}}">
+                <label class="col-1" for="sale_date">sale_date</label>
+                <input class=" col-4 @error('sale_date') animate__animated animate__shakeX @enderror" style="@error('sale_date') border : 2px solid red @enderror " type="text" id="sale_date" name="sale_date" value="{{old('sale_date') ?? $comic->sale_date}}">
+                @error('sale_date')
+                    <em style="color:red"> {{$message}} </em>
+                @enderror
             </div>
-            @error('sale_date')
-                <em style="color:red"> {{$message}} </em>
-            @enderror
 
             <div class="mb-2">
-                <label for="type">type</label>
-                <input style= "@error('type') border : 2px solid red @enderror " type="text" id="type" name="type" value="{{old('type') ?? $comic->type}}">
+                <label class="col-1" for="type">type</label>
+                <input class=" col-4 @error('type') animate__animated animate__shakeX @enderror" style="@error('type') border : 2px solid red @enderror " type="text" id="type" name="type" value="{{old('type') ?? $comic->type}}">
+                @error('type')
+                    <em style="color:red"> {{$message}} </em>
+                @enderror
             </div>
-            @error('type')
-                <em style="color:red"> {{$message}} </em>
-            @enderror
 
             <div class="mb-2">
-                <label for="artists">artists</label>
-                <input style= "@error('artists') border : 2px solid red @enderror " type="text" id="artists" name="artists" value="{{old('artists') ?? implode(',',json_decode($comic->artists))}}"> <em>(separare gli artist con una virgola)</em>
+                <label class="col-1" for="artists">artists</label>
+                <input class=" col-4 @error('artists') animate__animated animate__shakeX @enderror" style="@error('artists') border : 2px solid red @enderror " type="text" id="artists" name="artists" value="{{old('artists') ?? implode(',',json_decode($comic->artists))}}"> <em>(separare gli artist con una virgola)</em>
+                @error('artists')
+                    <em style="color:red"> {{$message}} </em>
+                @enderror
+            
             </div>
-            @error('artists')
-                <em style="color:red"> {{$message}} </em>
-            @enderror
-        
             <div class="mb-2">
-                <label for="writers">writers</label>
-                <input style= "@error('writers') border : 2px solid red @enderror " type="text" id="writers" name="writers" value="{{old('writers') ??implode(',', json_decode($comic->writers))}}"> <em>(separare i writer con una virgola)</em>
+                <label class="col-1" for="writers">writers</label>
+                <input class=" col-4 @error('writers') animate__animated animate__shakeX @enderror" style="@error('writers') border : 2px solid red @enderror " type="text" id="writers" name="writers" value="{{old('writers') ??implode(',', json_decode($comic->writers))}}"> <em>(separare i writer con una virgola)</em>
+                @error('writers')
+                    <em style="color:red"> {{$message}} </em>
+                @enderror
+            
             </div>
-            @error('writers')
-                <em style="color:red"> {{$message}} </em>
-            @enderror
-        
             <button type="submit">salva modifiche</button>
         
         </form>

@@ -66,18 +66,6 @@ class ComicController extends Controller
 
         $this->validatorDataForm($request);
     
-        // $request->validate([
-        //     'title' => 'required|max:50|min:2',
-        //     'description' => 'required|max:50|min:2',
-        //     'thumb' => 'required|max:50|min:2',
-        //     'price' => 'required|max:50|min:2',
-        //     'series' => 'required|max:50|min:2',
-        //     'sale_date' => 'required|max:50|min:2',
-        //     'type' => 'required|max:50|min:2',
-        //     'artists' => 'required|max:300|min:1',
-        //     'writers' => 'required|max:300|min:1',
-        // ]);
-
         $formData = $request->all();
 
         $newComic = new Comic();
@@ -158,18 +146,6 @@ class ComicController extends Controller
 
         $this->validatorDataForm($request);
 
-        // $request->validate([
-        //     'title' => 'required|max:50|min:2',
-        //     'description' => 'required|max:50|min:2',
-        //     'thumb' => 'required|max:50|min:2',
-        //     'price' => 'required|max:50|min:2',
-        //     'series' => 'required|max:50|min:2',
-        //     'sale_date' => 'required|max:50|min:2',
-        //     'type' => 'required|max:50|min:2',
-        //     'artists' => 'required|max:300|min:1',
-        //     'writers' => 'required|max:300|min:1',
-        // ]);
-
         $formData = $request->all();
 
         $formData['artists'] = json_encode(explode(',',$formData['artists']));
@@ -213,7 +189,7 @@ class ComicController extends Controller
             'title.required' => 'inserisci il titolo, non puoi lasciare questo campo vuoto',
             'title' => 'lunghezza caratteri massima 50',
             'title' => 'lunghezza caratteri minima 2',
-            'description.require' => 'inserisci la descrizione, non puoi lasciare questo campo vuoto',
+            'description.required' => 'inserisci la descrizione, non puoi lasciare questo campo vuoto',
             'description' =>  'lunghezza caratteri massima 300',
             'description' => 'lunghezza caratteri minima 2',
             'thumb.required' => 'inserisci il link, non puoi lasciare questo campo vuoto',

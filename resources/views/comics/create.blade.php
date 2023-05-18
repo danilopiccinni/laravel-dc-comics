@@ -2,93 +2,83 @@
 
 @section('content')
 
-    <div class="container m-3">
-
-        {{ var_dump($errors) }}
-
-        <ul>
-                @foreach ($errors->all() as $errorms)
-                <li>
-                    {{ $errorms }}
-                </li>
-                @endforeach
-            </ul>
+    <div class="container m-3 ">
 
         <form  action="{{route('comics.store')}}" method="POST">
         
             @csrf
     
             <div class="mb-2">
-                <label for="title">title</label>
-                <input style= "@error('title') border : 2px solid red @enderror " type="text" id="title" name="title" value="{{old('title')}}">
+                <label class="col-1" for="title">Title:</label>
+                <input class=" col-4 @error('title') animate__animated animate__shakeX @enderror" style= "@error('title') border : 1px solid red @enderror " type="text" id="title" name="title" value="{{old('title')}}">
+                @error('title')
+                    <em style="color:red"> {{$message}} </em>
+                @enderror
             </div>
-            @error('title')
-                <em style="color:red"> {{$message}} </em>
-            @enderror
 
             <div class="mb-2">
-                <label for="description">description</label>
-                <input style= "@error('description') border : 2px solid red @enderror " type="text" id="description" name="description" value="{{old('description')}}">
+                <label class="col-1" for="description">Description:</label>
+                <input class=" col-4 @error('description') animate__animated animate__shakeX @enderror" style= "@error('description') border : 1px solid red @enderror " type="text" id="description" name="description" value="{{old('description')}}">
+                @error('description')
+                    <em style="color:red"> {{$message}} </em>
+                @enderror
             </div>
-            @error('description')
-                <em style="color:red"> {{$message}} </em>
-            @enderror
 
             <div class="mb-2">
-                <label for="thumb">thumb</label>
-                <input style= "@error('thumb') border : 2px solid red @enderror " type="text" id="thumb" name="thumb" value="{{old('thumb')}}">
+                <label class="col-1" for="thumb">Image link:</label>
+                <input class=" col-4 @error('thumb') animate__animated animate__shakeX @enderror" style= "@error('thumb') border : 1px solid red @enderror " type="text" id="thumb" name="thumb" value="{{old('thumb')}}">
+                @error('thumb')
+                    <em style="color:red"> {{$message}} </em>
+                @enderror
             </div>
-            @error('thumb')
-                <em style="color:red"> {{$message}} </em>
-            @enderror
 
             <div class="mb-2">
-                <label for="price">price</label>
-                <input style= "@error('price') border : 2px solid red @enderror " type="text" id="price" name="price" value="{{old('price')}}">
+                <label class="col-1" for="price">Price:</label>
+                <input class=" col-4 @error('price') animate__animated animate__shakeX @enderror" style= "@error('price') border : 1px solid red @enderror " type="text" id="price" name="price" value="{{old('price')}}">
+                @error('price')
+                    <em style="color:red"> {{$message}} </em>
+                @enderror
             </div>
-            @error('price')
-                <em style="color:red"> {{$message}} </em>
-            @enderror
 
             <div class="mb-2">
-                <label for="series">series</label>
-                <input style= "@error('series') border : 2px solid red @enderror " type="text" id="series" name="series" value="{{old('series')}}">
+                <label class="col-1" for="series">Series:</label>
+                <input class="col-4 @error('series') animate__animated animate__shakeX @enderror" style= "@error('series') border : 1px solid red @enderror " type="text" id="series" name="series" value="{{old('series')}}">
+                @error('series')
+                    <em style="color:red"> {{$message}} </em>
+                @enderror
             </div>
-            @error('series')
-                <em style="color:red"> {{$message}} </em>
-            @enderror
 
             <div class="mb-2">
-                <label for="sale_date">sale_date</label>
-                <input style= "@error('sale_date') border : 2px solid red @enderror " type="text" id="sale_date" name="sale_date" value="{{old('sale_date')}}">
+                <label class="col-1" for="sale_date">Sale date:</label>
+                <input class="col-4 @error('sale_date') animate__animated animate__shakeX @enderror" style= "@error('sale_date') border : 1px solid red @enderror " type="text" id="sale_date" name="sale_date" value="{{old('sale_date')}}">
+                @error('sale_date')
+                    <em style="color:red"> {{$message}} </em>
+                @enderror
             </div>
-            @error('sale_date')
-                <em style="color:red"> {{$message}} </em>
-            @enderror
 
             <div class="mb-2">
-                <label for="type">type</label>
-                <input style= "@error('type') border : 2px solid red @enderror " type="text" id="type" name="type" value="{{old('type')}}">
+                <label class="col-1" for="type">Type:</label>
+                <input class="col-4 @error('type') animate__animated animate__shakeX @enderror" style= "@error('type') border : 1px solid red @enderror " type="text" id="type" name="type" value="{{old('type')}}">
+                @error('type')
+                    <em style="color:red"> {{$message}} </em>
+                @enderror
             </div>
-            @error('type')
-                <em style="color:red"> {{$message}} </em>
-            @enderror
 
             <div class="mb-2">
-                <label for="artists">artists</label>
-                <input style= "@error('artists') border : 2px solid red @enderror " type="text" id="artists" name="artists" value="{{old('artists')}}"> <em>(separare gli artist con una virgola)</em>
+                <label class="col-1" for="artists">Artists:</label>
+                <input class="col-4 @error('artists') animate__animated animate__shakeX @enderror" style= "@error('artists') border : 1px solid red @enderror " type="text" id="artists" name="artists" value="{{old('artists')}}"> <em>(separare gli artist con una virgola)</em>
+                @error('artists')
+                    <em style="color:red"> {{$message}} </em>
+                @enderror
             </div>
-            @error('artists')
-                <em style="color:red"> {{$message}} </em>
-            @enderror
 
             <div class="mb-2">
-                <label for="writers">writers</label>
-                <input style= "@error('writers') border : 2px solid red @enderror " type="text" id="writers" name="writers" value="{{old('writers')}}"> <em>(separare i writer con una virgola)</em>
+                <label class="col-1" for="writers">Writers:</label>
+                <input class="col-4 @error('writers') animate__animated animate__shakeX @enderror" style= "@error('writers') border : 1px solid red @enderror " type="text" id="writers" name="writers" value="{{old('writers')}}"> <em>(separare i writer con una virgola)</em>
+                @error('writers')
+                    <em style="color:red"> {{$message}} </em>
+                @enderror
             </div>
-            @error('writers')
-                <em style="color:red"> {{$message}} </em>
-            @enderror
 
         
             <button type="submit">aggiungi</button>
