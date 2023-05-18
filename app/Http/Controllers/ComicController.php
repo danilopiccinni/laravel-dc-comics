@@ -201,14 +201,44 @@ class ComicController extends Controller
 
         $validator = Validator::make($formData, [
             'title' => 'required|max:50|min:2',
-            'description' => 'required|max:50|min:2',
+            'description' => 'required|max:300|min:2',
             'thumb' => 'required|max:50|min:2',
             'price' => 'required|max:50|min:2',
             'series' => 'required|max:50|min:2',
             'sale_date' => 'required|max:50|min:2',
             'type' => 'required|max:50|min:2',
-            'artists' => 'required|max:300|min:1',
-            'writers' => 'required|max:300|min:1',
+            'artists' => 'required|max:300|min:2',
+            'writers' => 'required|max:300|min:2',
+        ], [
+            'title.required' => 'inserisci il titolo, non puoi lasciare questo campo vuoto',
+            'title' => 'lunghezza caratteri massima 50',
+            'title' => 'lunghezza caratteri minima 2',
+            'description.require' => 'inserisci la descrizione, non puoi lasciare questo campo vuoto',
+            'description' =>  'lunghezza caratteri massima 300',
+            'description' => 'lunghezza caratteri minima 2',
+            'thumb.required' => 'inserisci il link, non puoi lasciare questo campo vuoto',
+            'thumb' => 'lunghezza caratteri massima 50',
+            'thumb' => 'lunghezza caratteri minima 2',
+            'price.required' => 'inserisci il prezzo, non puoi lasciare questo campo vuoto',
+            'price' => 'lunghezza caratteri massima 50',
+            'price' => 'lunghezza caratteri minima 2',
+            'series.required' => 'inserisci la serie, non puoi lasciare questo campo vuoto',
+            'series' => 'lunghezza caratteri massima 50',
+            'series' => 'lunghezza caratteri minima 2',
+            'sale_date.required' => 'inserisci la data, non puoi lasciare questo campo vuoto',
+            'sale_date' => 'lunghezza caratteri massima 50',
+            'sale_date' => 'lunghezza caratteri minima 2',
+            'type.required' => 'inserisci la tipologia, non puoi lasciare questo campo vuoto',
+            'type' => 'lunghezza caratteri massima 50',
+            'type' => 'lunghezza caratteri minima 2',
+            'artists.required' => 'inserisci almeno un "artist", non puoi lasciare questo campo vuoto',
+            'artists' =>  'lunghezza caratteri massima 300',
+            'artists' => 'lunghezza caratteri minima 2',
+            'writers.required' => 'inserisci almeno un "writer" non puoi lasciare questo campo vuoto',
+            'writers' =>  'lunghezza caratteri massima 300',
+            'writers' => 'lunghezza caratteri minima 2',
+
+
         ])->validate();
 
         return $validator;
