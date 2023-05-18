@@ -51,7 +51,7 @@
 
             <div class="mb-2">
                 <label class="col-1" for="sale_date">Sale date:</label>
-                <input class=" col-4 @error('sale_date') animate__animated animate__shakeX @enderror" style="@error('sale_date') border : 2px solid red @enderror " type="text" id="sale_date" name="sale_date" value="{{old('sale_date') ?? $comic->sale_date}}">
+                <input class=" col-4 @error('sale_date') animate__animated animate__shakeX @enderror" style="@error('sale_date') border : 2px solid red @enderror " type="date" id="sale_date" name="sale_date" value="{{old('sale_date') ?? $comic->sale_date}}">
                 @error('sale_date')
                     <em style="color:red"> {{$message}} </em>
                 @enderror
