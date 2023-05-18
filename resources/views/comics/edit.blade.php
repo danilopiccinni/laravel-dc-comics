@@ -11,40 +11,75 @@
     
             <div class="mb-2">
                 <label for="title">title</label>
-                <input type="text" id="title" name="title" value="{{$comic->title}}">
+                <input style= "@error('title') border : 2px solid red @enderror " type="text" id="title" name="title" value="{{old('title') ?? $comic->title}}">
             </div>
+            @error('title')
+                <em> {{$message}} </em>
+            @enderror
+
             <div class="mb-2">
                 <label for="description">description</label>
-                <input type="text" id="description" name="description" value="{{$comic->description}}">
+                <input style= "@error('description') border : 2px solid red @enderror " type="text" id="description" name="description" value="{{old('description') ?? $comic->description}}">
             </div>
+            @error('description')
+                <em> {{$message}} </em>
+            @enderror
+
             <div class="mb-2">
                 <label for="thumb">thumb</label>
-                <input type="text" id="thumb" name="thumb" value="{{$comic->thumb}}">
+                <input style= "@error('thumb') border : 2px solid red @enderror " type="text" id="thumb" name="thumb" value="{{old('thumb') ?? $comic->thumb}}">
             </div>
+            @error('thumb')
+                <em> {{$message}} </em>
+            @enderror
+
             <div class="mb-2">
                 <label for="price">price</label>
-                <input type="text" id="price" name="price" value="{{$comic->price}}">
+                <input style= "@error('price') border : 2px solid red @enderror " type="text" id="price" name="price" value="{{old('price') ?? $comic->price}}">
             </div>
+            @error('price')
+                <em> {{$message}} </em>
+            @enderror
+
             <div class="mb-2">
                 <label for="series">series</label>
-                <input type="text" id="series" name="series" value="{{$comic->series}}">
+                <input style= "@error('series') border : 2px solid red @enderror " type="text" id="series" name="series" value="{{old('series') ?? $comic->series}}">
             </div>
+            @error('series')
+                <em> {{$message}} </em>
+            @enderror
+
             <div class="mb-2">
                 <label for="sale_date">sale_date</label>
-                <input type="text" id="sale_date" name="sale_date" value="{{$comic->sale_date}}">
+                <input style= "@error('sale_date') border : 2px solid red @enderror " type="text" id="sale_date" name="sale_date" value="{{old('sale_date') ?? $comic->sale_date}}">
             </div>
+            @error('sale_date')
+                <em> {{$message}} </em>
+            @enderror
+
             <div class="mb-2">
                 <label for="type">type</label>
-                <input type="text" id="type" name="type" value="{{$comic->type}}">
+                <input style= "@error('type') border : 2px solid red @enderror " type="text" id="type" name="type" value="{{old('type') ?? $comic->type}}">
             </div>
+            @error('type')
+                <em> {{$message}} </em>
+            @enderror
+
             <div class="mb-2">
                 <label for="artists">artists</label>
-                <input type="text" id="artists" name="artists" value="{{implode(',',json_decode($comic->artists))}}"> <em>(separare gli artist con una virgola)</em>
+                <input style= "@error('artists') border : 2px solid red @enderror " type="text" id="artists" name="artists" value="{{old('artists') ?? implode(',',json_decode($comic->artists))}}"> <em>(separare gli artist con una virgola)</em>
             </div>
+            @error('artists')
+                <em> {{$message}} </em>
+            @enderror
+        
             <div class="mb-2">
                 <label for="writers">writers</label>
-                <input type="text" id="writers" name="writers" value="{{implode(',', json_decode($comic->writers))}}"> <em>(separare i writer con una virgola)</em>
+                <input style= "@error('writers') border : 2px solid red @enderror " type="text" id="writers" name="writers" value="{{old('writers') ??implode(',', json_decode($comic->writers))}}"> <em>(separare i writer con una virgola)</em>
             </div>
+            @error('writers')
+                <em> {{$message}} </em>
+            @enderror
         
             <button type="submit">salva modifiche</button>
         
