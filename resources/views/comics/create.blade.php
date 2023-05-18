@@ -16,9 +16,9 @@
                 @enderror
             </div>
 
-            <div class="mb-2">
+            <div class="mb-2 d-flex gap-1 align-items-center">
                 <label class="col-1" for="description">Description:</label>
-                <input class=" col-4 @error('description') animate__animated animate__shakeX @enderror" style= "@error('description') border : 1px solid red @enderror " type="text" id="description" name="description" value="{{old('description')}}">
+                <textarea class=" col-4 @error('description') animate__animated animate__shakeX @enderror" style= "@error('description') border : 1px solid red @enderror " type="text" id="description" name="description">{{old('description')}}</textarea>
                 @error('description')
                     <em style="color:red"> {{$message}} </em>
                 @enderror
