@@ -67,20 +67,21 @@
 
             <div class="mb-2">
                 <label class="col-1" for="artists">Artists:</label>
-                <input class=" col-4 @error('artists') animate__animated animate__shakeX @enderror" style="@error('artists') border : 2px solid red @enderror " type="text" id="artists" name="artists" value="{{old('artists') ?? implode(',',json_decode($comic->artists))}}"> <em>(separare gli artist con una virgola)</em>
+                <input class=" col-4 @error('artists') animate__animated animate__shakeX @enderror" style="@error('artists') border : 2px solid red @enderror " type="text" id="artists" name="artists" value="{{old('artists') ?? implode(',',json_decode($comic->artists))}}"> 
                 @error('artists')
                     <em style="color:red"> {{$message}} </em>
                 @enderror
-            
+                <em>(separare gli artist con una virgola)</em>
             </div>
             <div class="mb-2">
                 <label class="col-1" for="writers">Writers:</label>
-                <input class=" col-4 @error('writers') animate__animated animate__shakeX @enderror" style="@error('writers') border : 2px solid red @enderror " type="text" id="writers" name="writers" value="{{old('writers') ??implode(',', json_decode($comic->writers))}}"> <em>(separare i writer con una virgola)</em>
+                <input class=" col-4 @error('writers') animate__animated animate__shakeX @enderror" style="@error('writers') border : 2px solid red @enderror " type="text" id="writers" name="writers" value="{{old('writers') ??implode(',', json_decode($comic->writers))}}"> 
                 @error('writers')
                     <em style="color:red"> {{$message}} </em>
                 @enderror
-            
+                <em>(separare i writer con una virgola)</em>
             </div>
+            
             <button type="submit">salva modifiche</button>
         
         </form>

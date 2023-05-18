@@ -66,18 +66,20 @@
 
             <div class="mb-2">
                 <label class="col-1" for="artists">Artists:</label>
-                <input class="col-4 @error('artists') animate__animated animate__shakeX @enderror" style= "@error('artists') border : 1px solid red @enderror " type="text" id="artists" name="artists" value="{{old('artists')}}"> <em>(separare gli artist con una virgola)</em>
+                <input class="col-4 @error('artists') animate__animated animate__shakeX @enderror" style= "@error('artists') border : 1px solid red @enderror " type="text" id="artists" name="artists" value="{{old('artists')}}">
                 @error('artists')
                     <em style="color:red"> {{$message}} </em>
                 @enderror
+                <em>(separare gli artist con una virgola)</em>
             </div>
 
             <div class="mb-2">
                 <label class="col-1" for="writers">Writers:</label>
-                <input class="col-4 @error('writers') animate__animated animate__shakeX @enderror" style= "@error('writers') border : 1px solid red @enderror " type="text" id="writers" name="writers" value="{{old('writers')}}"> <em>(separare i writer con una virgola)</em>
+                <input class="col-4 @error('writers') animate__animated animate__shakeX @enderror" style= "@error('writers') border : 1px solid red @enderror " type="text" id="writers" name="writers" value="{{old('writers')}}"> 
                 @error('writers')
                     <em style="color:red"> {{$message}} </em>
                 @enderror
+                <em>(separare i writer con una virgola)</em>
             </div>
 
         
